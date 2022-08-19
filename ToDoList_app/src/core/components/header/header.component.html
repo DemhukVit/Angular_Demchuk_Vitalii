@@ -1,0 +1,19 @@
+<header class="header">
+  <h1 class="header__title">To Do List</h1>
+  <div class="btn-group">
+    <app-button [buttonText]="'ALL'"></app-button>
+    <app-button [buttonText]="'ACTIVE'"></app-button>
+    <app-button [buttonText]="'FINISHED'"></app-button>
+  </div>
+  <div class="header-selector">
+
+  </div>
+<div class="header-create">
+  <h4 class="header-create-text" >Create new task:</h4>
+  <div class="header-create-controls">
+    <app-text-input></app-text-input>
+    <app-button [buttonText]="'Create'"></app-button>
+  </div>
+</div>
+
+</header>
