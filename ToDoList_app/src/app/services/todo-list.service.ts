@@ -7,7 +7,7 @@ providedIn: "root",
 export class TodoListService{
   private todoList: ApplicationInterfaces[] = [
     {
-      isFinished: true,
+      isFinished: false,
       id: 1,
       title: 'I need Beer',
       dateOfCreation: new Date(),
@@ -21,7 +21,7 @@ export class TodoListService{
       deadLineDate: new Date()
     },
     {
-      isFinished: true,
+      isFinished: false,
       id: 3,
       title: 'I need Vino',
       dateOfCreation: new Date(),

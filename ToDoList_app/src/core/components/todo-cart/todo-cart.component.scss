@@ -21,5 +21,11 @@
     margin-right: 5px;
   }
 }
+  &.finished {
+    background: #757373;
+    & .todo-card__text{
+      text-decoration: line-through;
+    }
+  }
 }
 

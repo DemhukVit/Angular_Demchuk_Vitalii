@@ -1,7 +1,7 @@
-<mat-card class="todo-card">
-  <mat-slide-toggle [checked] = "isToDoFinished"></mat-slide-toggle>
+<mat-card [class.finished] = "isToDoFinished" class="todo-card">
+  <mat-slide-toggle [checked] = "isToDoFinished" (change)="todoStatusChange()"></mat-slide-toggle>
 
-  <h5 class="todo-card__number">{{cardNumber}}</h5>
+  <h5 class="todo-card__text">{{cardNumber}}</h5>
 
   <h5 class="todo-card__text">{{ cardText}}</h5>
 

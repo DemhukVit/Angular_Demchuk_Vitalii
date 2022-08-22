@@ -16,6 +16,10 @@ export class TodoCartComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
+  todoStatusChange() {
+    this.isToDoFinished = !this.isToDoFinished;
+  }
 }

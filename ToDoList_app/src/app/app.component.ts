@@ -16,5 +16,6 @@ export class AppComponent implements OnInit {
 
  public ngOnInit(): void {
    this.todoList=this.todoListService.getTodoList;
+   console.log(this.todoList);
  }
 }
