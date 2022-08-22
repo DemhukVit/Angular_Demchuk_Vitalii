@@ -1,6 +1,14 @@
 <div class="container">
   <app-header></app-header>
   <div class="section">
-    <app-todo-cart></app-todo-cart>
+    <app-todo-cart
+      *ngFor="let todo of todoList; index as idx"
+      [isToDoFinished] = "todo.isFinished"
+      [cardText] = "todo.title"
+      [dateOfCreation] = "todo.dateOfCreation"
+      [deadLineDate] = "todo.deadLineDate"
+      [cardNumber] = " idx +1"
+    ></app-todo-cart>
+
   </div>
 </div>
