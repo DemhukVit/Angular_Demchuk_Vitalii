@@ -1,5 +1,6 @@
 .header {
-  padding: 10px 20px;
+  background: #34b3f8;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,4 +31,17 @@
     color: #ffffff;
     margin-bottom: 10px;
   }
+
+  &-create-controls {
+    & app-text-input {
+      margin-right: 10px;
+    }
+  }
 }
+
+.btn-group {
+  & app-button {
+    margin-right: 15px;
+  }
+}
+

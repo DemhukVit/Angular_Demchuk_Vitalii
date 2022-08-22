@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-input.component.scss']
 })
 export class TextInputComponent implements OnInit {
+  public value: string = 'New task';
 
   constructor() { }
 
