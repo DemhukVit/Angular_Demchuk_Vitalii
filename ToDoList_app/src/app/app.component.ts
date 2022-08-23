@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApplicationInterfaces} from "./interfaces/application.interfaces";
+import {TodoCard} from "./interfaces/application.interfaces";
 import {TodoListService} from "./services/todo-list.service";
 
 @Component({
@@ -9,13 +9,17 @@ import {TodoListService} from "./services/todo-list.service";
 })
 export class AppComponent implements OnInit {
   title = 'ToDoList_app';
-  public todoList: ApplicationInterfaces[] = [];
+  public todoList: TodoCard[] = [];
 
  constructor( private todoListService: TodoListService) {
  }
 
  public ngOnInit(): void {
    this.todoList=this.todoListService.getTodoList;
-   console.log(this.todoList);
  }
+
+  public handleUpdate(name: string): void {
+   this.todoListService.setNewTodo = name;
+    this.todoList=this.todoListService.getTodoList;
+  }
 }

@@ -11,8 +11,8 @@
 <div class="header-create">
   <h4 class="header-create-text" >Create new task:</h4>
   <div class="header-create-controls">
-    <app-text-input></app-text-input>
-    <app-button [buttonText]="'Create'"></app-button>
+    <app-text-input [textControl]="todoControl"></app-text-input>
+    <app-button (click)="todoControl.valid ? createTodo(): null" [buttonText]="'Create'"></app-button>
   </div>
 </div>
 

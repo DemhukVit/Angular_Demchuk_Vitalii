@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl, Validators} from "@angular/forms";
+
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @Output() updateEvent: EventEmitter<string>= new EventEmitter<string>();
 
-  constructor() { }
+  public todoControl: FormControl = new FormControl('I must to ', [Validators.required]);
 
-  ngOnInit(): void {
+  createTodo() {
+this.updateEvent.emit(this.todoControl.value);
+this.todoControl.reset('I must to');
   }
-
 }

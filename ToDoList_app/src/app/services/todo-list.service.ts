@@ -1,11 +1,11 @@
 import {Injectable} from "@angular/core";
-import {ApplicationInterfaces} from "../interfaces/application.interfaces";
+import {TodoCard} from "../interfaces/application.interfaces";
 
 @Injectable({
-providedIn: "root",
+  providedIn: "root",
 })
-export class TodoListService{
-  private todoList: ApplicationInterfaces[] = [
+export class TodoListService {
+  private todoList: TodoCard[] = [
     {
       isFinished: false,
       id: 1,
@@ -28,7 +28,22 @@ export class TodoListService{
       deadLineDate: new Date()
     },
   ];
-  public get getTodoList():ApplicationInterfaces[]{
+
+  public get getTodoList(): TodoCard[] {
     return this.todoList
   }
+
+  // @ts-ignore
+  public set setNewTodo(todoTitle: string): void {
+    const newTodo: TodoCard = {
+      isFinished: false,
+      title: todoTitle,
+      dateOfCreation: new Date(),
+      deadLineDate: new Date(),
+      id: Math.floor(Math.random() * 1000),
+    }
+    this.todoList = [...this.todoList, newTodo];
+  }
+
+
 }
