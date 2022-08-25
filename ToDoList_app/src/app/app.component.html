@@ -1,0 +1,15 @@
+<div class="container">
+  <app-header (updateEvent)="handleUpdate($event)"></app-header>
+  <div class="section">
+    <app-todo-cart
+      *ngFor="let todo of todoList; index as idx"
+      [todoCard]="todo"
+      [cardNumber]=" idx +1"
+      (changeTodoListStatus)="changeTodoListStatus(todo)"
+      (deleteTodoEvent)="deleteTodo(todo)"
+      (editTodoEvent)="editTodo(todo)"
+
+    ></app-todo-cart>
+
+  </div>
+</div>

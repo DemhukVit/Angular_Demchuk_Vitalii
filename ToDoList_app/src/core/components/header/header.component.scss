@@ -1,0 +1,47 @@
+.header {
+  background: #34b3f8;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+  -webkit-box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+  -moz-box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+
+  &__title {
+    color: #ffffff;
+    font-size: 70px;
+    font-weight: 700;
+  }
+
+  &-create {
+    border-radius: 15px;
+    border: 1px solid #000000;
+    padding: 10px;
+    background: #a2dbf8;
+    box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+    -webkit-box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 4px 25px 38px 7px rgba(0, 0, 0, 0.65);
+  }
+
+  &-create-text {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  &-create-controls {
+    & app-text-input {
+      margin-right: 10px;
+    }
+  }
+}
+
+.btn-group {
+  & app-button {
+    margin-right: 15px;
+  }
+}
+

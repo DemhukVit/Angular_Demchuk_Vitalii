@@ -1,0 +1,31 @@
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb{
+  background-color: #34b3f8;
+}
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar{
+  background-color: #0f32e0;
+}
+.todo-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__pencil,&__delete {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+&-date{
+  display: flex;
+  align-items: center;
+  & h5:first-child{
+    margin-right: 5px;
+  }
+}
+  &.finished {
+    background: #757373;
+    & .todo-card__text{
+      text-decoration: line-through;
+    }
+  }
+}
+
